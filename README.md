@@ -62,7 +62,12 @@ docker compose run --rm api alembic revision --autogenerate -m "create users and
 
 docker compose run --rm api alembic upgrade head
 ```
+## files
 
+```sh
+docker compose run --rm api alembic revision --autogenerate -m "align files model for storage metadata"
+docker compose run --rm api alembic upgrade head
+```
 
 ## DDX
 

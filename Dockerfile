@@ -14,4 +14,5 @@ RUN pip install --no-cache-dir -r requirements-dev.txt
 
 COPY . .
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# RUN chmod +x /code/scripts/run.sh
+CMD ["./scripts/run.sh"]

@@ -23,6 +23,10 @@ class Settings(BaseSettings):
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 60
 
+    storage_provider: str = "local"
+    storage_bucket: str = "pixel-caption"
+    storage_base_dir: str = "/tmp/pixel-caption-storage"
+
     @property
     def database_url(self) -> str:
         return (

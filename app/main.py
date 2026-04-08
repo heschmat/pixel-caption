@@ -5,6 +5,7 @@ from fastapi import FastAPI
 
 from app.api.routers.health import router as health_router
 from app.api.routers.auth import router as auth_router
+from app.api.routers.files import router as files_router
 from app.core.config import settings
 from app.core.logging import configure_logging
 
@@ -24,6 +25,8 @@ def create_app() -> FastAPI:
     app.include_router(health_router)
     app.include_router(auth_router)
     # app.include_router(auth_router, prefix="/auth", tags=["auth"])
+    # app.include_router(files_router, prefix="/files", tags=["files"])
+    app.include_router(files_router)
 
     return app
 
