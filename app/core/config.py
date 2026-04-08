@@ -16,8 +16,12 @@ class Settings(BaseSettings):
         env_file=".env",
         env_file_encoding="utf-8",
         case_sensitive=False,
-        extra="ignore",
+        extra="ignore", # Ignore extra fields in the .env file that are not defined in this Settings class
     )
+
+    jwt_secret_key: str
+    jwt_algorithm: str = "HS256"
+    access_token_expire_minutes: int = 60
 
     @property
     def database_url(self) -> str:

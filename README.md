@@ -62,3 +62,11 @@ docker compose run --rm api alembic revision --autogenerate -m "create users and
 
 docker compose run --rm api alembic upgrade head
 ```
+
+
+## DDX
+
+```sh
+docker compose exec db psql -h localhost -U admino -d pixel_caption_db
+
+```

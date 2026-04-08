@@ -5,3 +5,7 @@ python-json-logger
 sqlalchemy
 psycopg[binary]
 alembic
+pwdlib[argon2]
+pyjwt
+python-multipart
+email-validator
